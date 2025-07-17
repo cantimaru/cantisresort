@@ -1,0 +1,156 @@
+.frame {
+    font-family: 'Courier New', Courier, monospace;
+    width: 800px;
+    height: 568px;
+    background-image: linear-gradient(#f49a21, #ff9d21, #ffae22);
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -284px;
+    margin-left: -400px;
+    overflow: hidden;
+}
+
+.bg {
+    width: auto;
+    height: auto;
+    background-color: black;
+    z-index: 0;
+}
+
+.heading {
+    color: white;
+    margin: auto;
+}
+
+#topbanner {
+    height: 50px;
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+    background: black;
+    color: black;
+    border: 1px solid white;
+    background: #eFefeF;
+    margin: auto;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border: #eFefeF;
+    background-color: black;
+    position: relative;
+    z-index: inherit;
+}
+
+.notice {
+    color: #b27618;
+    font-size: 900%;
+    z-index: 1;
+    position: absolute;
+    right: -50px;
+    bottom: -40px;
+    stroke: #b27618 ;
+
+}
+
+.orange {
+    width: 600px;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #e8861d;
+    color: #785528;
+    word-wrap: break-word;
+    z-index: 3;
+    position: relative;
+}
+
+#short{
+    width: 400px;
+    margin-left:100px;
+}
+
+#fakebanner {
+    text-align: left;
+    margin-top: 2px;
+    position: relative;
+}
+
+#birthday {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    z-index: 3;
+    right: 0px;
+    bottom: 150px;
+    color: darkslategray;
+    position: absolute;
+}
+
+.white {
+    color: white;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.osquare {
+    width: 20px;
+    height: 20px;
+    background-color: #e8861d;
+    z-index: 99;
+    position: absolute;
+    margin-left: 96%;
+    margin-top: -4.5%;
+}
+
+.osquare2 {
+    width: 20px;
+    height: 20px;
+    background-color: #e8861d;
+    z-index: 99;
+    position: relative;
+    margin-left: -250%;
+}
+
+.bsquare {
+    width: 20px;
+    height: 20px;
+    background-color: #4d92ff;
+    z-index: 99;
+    position: relative;
+    margin-left: -250%;
+}
+
+#diffont{
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 30px;
+    
+}
