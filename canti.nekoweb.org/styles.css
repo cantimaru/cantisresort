@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
 	font-family: 'HELLSINKER';
 	src: url('fon/hellsinker-mono.ttf') format('truetype');
 	font-weight: normal;
@@ -12,25 +12,33 @@
 
 @font-face {
 	font-family: "TNR";
-	src:url('fon/TNR.ttf');
-	
+	src: url('fon/TNR.ttf');
+
 }
 
 html {
 	min-height: 100%;
 }
 
+:root {
+	--page-content-offset: 325px;
+	--page-side-gap: 16px;
+}
+
 body {
 	margin: 0;
 	min-height: 100vh;
 	font-family: "Courier New", Courier, monospace;
+	
 }
 
 .page-shell {
-	width: min(800px, calc(100vw - 32px));
+	width: min(800px, calc(100vw - (var(--page-side-gap) * 2)));
+	min-height: 100vh;
 	margin: 16px auto 24px;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: auto auto auto 1fr;
 	grid-template-areas:
 		"header"
 		"content"
@@ -45,13 +53,18 @@ body {
 
 .page-header {
 	grid-area: header;
+	
 }
 
 #topbanner {
-	width: 100%;
+	width: fit-content;
 	height: 50px;
+	margin-inline: auto;
+	padding-inline: 14px;
 	overflow: hidden;
-	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	color: black;
 	border: 1px solid white;
 	background: #efefef;
@@ -60,7 +73,7 @@ body {
 
 .banner {
 	width: 100%;
-	height: auto;
+	height: 26px;
 	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
@@ -73,14 +86,17 @@ body {
 .page-content {
 	grid-area: content;
 	width: 100%;
-	height: auto;
+	height: 568px;
 	margin: 0;
+	margin-top: var(--page-content-offset);
 	padding-bottom: 140px;
 	overflow: visible;
 	box-sizing: border-box;
-	background-image: linear-gradient(#f49a21, #ff9d21, #ffae22);
+	background: linear-gradient(#f49a21, #ff9d21, #ffae22);
 	position: relative;
-	min-height: 568px;
+	min-height: 508px;
+	overflow: hidden;
+	
 }
 
 .notice {
@@ -96,7 +112,7 @@ body {
 .orange {
 	width: min(600px, calc(100% - 24px));
 	height: auto;
-	margin: 20px auto 0;
+	margin: 26px 100px;
 	background-color: #e8861d;
 	color: #785528;
 	word-wrap: break-word;
@@ -116,7 +132,8 @@ body {
 	justify-content: space-between;
 	gap: 16px;
 	margin-top: 2px;
-	padding: 10px 12px 8px;
+	margin-bottom: 12px;
+	padding: 16px 12px 16px;
 	box-sizing: border-box;
 	position: relative;
 	text-align: left;
@@ -137,20 +154,20 @@ body {
 	position: relative;
 	height: 50px;
 	overflow: hidden;
-	background-image: linear-gradient(#f49a21, #ff9d21, #ffae22);
+	background: linear-gradient(#f49a21, #ff9d21, #ffae22);
 	border-inline: 4px solid transparent;
 	box-sizing: border-box;
 }
 
 .site-footer {
 	grid-area: footer;
+	align-self: end;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 	gap: 12px;
-	padding: 14px 16px 18px;
-	background: linear-gradient(180deg, #1a1108, #0d0907);
-	border: 1px solid rgba(255, 255, 255, 0.12);
-	color: #d6b389;
+	padding: 4px 16px 4px;
+	background: linear-gradient(#f49a21, #ff9d21, #ffae22);
+	color: #785528;
 	box-sizing: border-box;
 }
 
@@ -159,12 +176,17 @@ body {
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 0.12em;
-	color: #f0cfaa;
+	color: #46351f;
 }
 
 .site-footer p {
 	margin: 0 0 6px;
 	line-height: 1.35;
+	color: #785528;
+}
+
+.section-gap-tight {
+	margin-bottom: 12px;
 }
 
 .white {
@@ -181,10 +203,10 @@ a:active {
 }
 
 .osquare3 {
-	background-color: #e8861d;
+	background-color: #ffa921;
 	z-index: 99;
-	width: 20px;
-	height: 20px;
+	width: 16px;
+	height: 16px;
 }
 
 
@@ -192,8 +214,8 @@ a:active {
 	background-color: #4d92ff;
 	z-index: 99;
 	position: relative;
-	width: 20px;
-	height: 20px;
+	width: 16px;
+	height: 16px;
 }
 
 #diffont {
@@ -206,16 +228,18 @@ a:active {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	gap: 10px;
+	gap: 16px;
 	margin-left: auto;
 	flex: 0 0 auto;
+	
 }
 
-.container > div {
+.container>div {
 	margin: 0 10px;
 	padding: 0;
 	position: relative;
-	flex: 0 0 20px;
+	flex: 0 0 16px;
+	transform: translateX(12px);
 }
 
 .footer-banners {
@@ -240,7 +264,7 @@ a:active {
 	padding-right: 12px;
 }
 
-.footer-set > img {
+.footer-set>img {
 	display: block;
 	flex: 0 0 auto;
 }
@@ -255,6 +279,7 @@ a:active {
 	from {
 		transform: translate(0, -50%);
 	}
+
 	to {
 		transform: translate(-33.333333%, -50%);
 	}
